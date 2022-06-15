@@ -1,0 +1,10 @@
+div.dropdown{
+  position: relative;
+  padding: 8px;
+}
+.col-middle{
+  border: solid red 2px;
+}
+.dropdownDIVLogin{
+  padding-right: 6px;
+}
