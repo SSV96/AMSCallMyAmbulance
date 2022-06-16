@@ -41,12 +41,12 @@ async function driverAvailabilityStatusUpdate(status){
                                  'Content-Type': 'application/json',
                                 },
                       "body":JSON.stringify(status) 
-                    })
+                    });
 }
 
 
 socket.on("send-data-to-all-Drivers",(msg)=>{
-
+     bookingDetailsForDB=msg;
    console.log(msg);
    MyOffers(msg);
 
@@ -120,8 +120,11 @@ socket.on("send-data-to-all-Drivers",(msg)=>{
      driverDetails.forEach(element =>{
           driverDetailsdata[i++] = element.value || element.textContent;
      });
-     
-     console.log(driverDetailsdata);
+
+     // BookingConformDetails
+     // patientDetails
+     bookingDetailsValues
+     console.log("detaild",driverDetailsdata);
      
      socket.emit("driverConformedOffer",driverDetailsdata);
      
@@ -149,7 +152,7 @@ socket.on("send-data-to-all-Drivers",(msg)=>{
      //     i=0;
      //    bookingConformDetails.forEach(Element=>{
      //      Element.textContent=bookingData[i++];
-     //    })
+     //    });
           
 }
 
