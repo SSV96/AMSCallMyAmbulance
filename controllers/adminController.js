@@ -27,7 +27,7 @@ function getAllPatient(req, res) {
       return res.status(403).send(err);
     }
     return res.status(200).send({
-      message: "Successfully executed",
+      message: "Successfully executed yes ",
       result,
     });
   });
